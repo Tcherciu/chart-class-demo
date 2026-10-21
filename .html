@@ -47,24 +47,6 @@ const data   = [6.00, 12.00, 11.00, 15.00, 9.00];
     g.arc(x, y, 4, 0, Math.PI * 2);
     g.fill();
   });
-
-  g.fillStyle = "#333";
-  g.font = "12px sans-serif";
-  g.textAlign = "center";
-  pts.forEach(([x], i) => g.fillText(labels[i], x, padT + h + 20));
-  
-  options: {
-  responsive: true,
-  maintainAspectRatio: true,
-  animation: {
-    duration: 1500,          // milliseconds
-    easing: easeOutQuart   // try easeOutBounce, easeInOutCubic
-  },
-  plugins: {
-    legend: { display: true }
-  },
-  scales: {
-    y: { beginAtZero: true }
   }
 }
 </script>
