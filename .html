@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+
 <html>
 <head>
   <meta charset="UTF-8">
@@ -51,6 +51,21 @@
   g.font = "12px sans-serif";
   g.textAlign = "center";
   pts.forEach(([x], i) => g.fillText(labels[i], x, padT + h + 20));
+  
+  options: {
+  responsive: true,
+  maintainAspectRatio: true,
+  animation: {
+    duration: 1500,          // milliseconds
+    easing: "easeOutQuart"   // try easeOutBounce, easeInOutCubic
+  },
+  plugins: {
+    legend: { display: true }
+  },
+  scales: {
+    y: { beginAtZero: true }
+  }
+}
 </script>
 </body>
 </html>
